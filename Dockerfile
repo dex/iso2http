@@ -9,3 +9,4 @@ RUN go install -v ./...
 EXPOSE 8080
 
 ENTRYPOINT ["http2iso"]
+CMD ["/my.iso"]
