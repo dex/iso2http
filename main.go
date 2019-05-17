@@ -14,7 +14,7 @@ import (
 
 var port = flag.Int("p", 8080, "`Port` to linsten on")
 
-var flag.Usage = func () {
+var Usage = func() {
 	fmt.Fprintf(os.Stderr, "Usage: %s [options] <iso>\n", os.Args[0])
 	fmt.Fprintf(os.Stderr, "\nOptions:\n")
 	flag.PrintDefaults()
