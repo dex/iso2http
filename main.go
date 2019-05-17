@@ -14,7 +14,7 @@ import (
 
 var port = flag.Int("p", 8080, "`Port` to linsten on")
 
-func usage() {
+var flag.Usage = func () {
 	fmt.Fprintf(os.Stderr, "Usage: %s [options] <iso>\n", os.Args[0])
 	fmt.Fprintf(os.Stderr, "\nOptions:\n")
 	flag.PrintDefaults()
@@ -32,7 +32,7 @@ func main() {
 	flag.Parse()
 
 	if flag.NArg() < 1 {
-		usage()
+		flag.Usage()
 		os.Exit(1)
 	}
 
