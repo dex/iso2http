@@ -62,7 +62,7 @@ func main() {
 	}
 	isofile := flag.Arg(0)
 
-	if strings.HasPrefix(isofile, "http") {
+	if strings.HasPrefix(isofile, "http://") {
 		fmt.Println("Download ISO file")
 		tmpName, err := download(isofile)
 		if err != nil {
